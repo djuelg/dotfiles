@@ -1,0 +1,23 @@
+[alias]
+	st = status
+	ci = commit
+	a  = add
+	ap = add -p
+	sa = stash
+	di = diff
+	co = checkout
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	unstage = reset HEAD
+  	uncommit = reset --soft HEAD^
+  	unchange = checkout HEAD
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[apply]
+	whitespace = fix
+[core]
+	autocrlf = input
+[user]
+	name = Dominik Juelg
+	email = edit@email

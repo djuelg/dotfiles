@@ -17,6 +17,7 @@
 [apply]
 	whitespace = fix
 [core]
+        editor = vim
 	autocrlf = input
 [user]
 	name = Dominik Juelg

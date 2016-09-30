@@ -81,8 +81,14 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+zshconfig="subl ~/.zshrc"
+ohmyzsh="subl ~/.oh-my-zsh"
+alias dow="cd ~/Downloads"
+alias doc="cd ~/Documents"
+alias des="cd ~/Desktop"
+alias sagi="sudo apt-get install"
+alias saar="sudo apt autoremove"
+
 
 # Other Stuff
 RPROMPT='%{$fg[green]%}%~%{$reset_color%} [%T]'

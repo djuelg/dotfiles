@@ -79,8 +79,8 @@ fi
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
+
+# Aliases
 zshconfig="subl ~/.zshrc"
 ohmyzsh="subl ~/.oh-my-zsh"
 alias dow="cd ~/Downloads"
@@ -88,7 +88,9 @@ alias doc="cd ~/Documents"
 alias des="cd ~/Desktop"
 alias sagi="sudo apt-get install"
 alias saar="sudo apt autoremove"
-
+alias sagu="sudo apt-get upgrade"
+alias __="sudo -i"
 
 # Other Stuff
 RPROMPT='%{$fg[green]%}%~%{$reset_color%} [%T]'
+setxkbmap -option terminate:ctrl_alt_bksp

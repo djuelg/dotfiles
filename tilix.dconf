@@ -1,0 +1,19 @@
+[/]
+warn-vte-config-issue=false
+theme-variant='dark'
+
+[profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+foreground-color='#A7A7A7'
+visible-name='Standard'
+dim-color-set=false
+palette=['#1E1E1E', '#CF6A4C', '#8F9D6A', '#F9EE98', '#7587A6', '#9B859D', '#AFC4DB', '#A7A7A7', '#5F5A60', '#CF6A4C', '#8F9D6A', '#F9EE98', '#7587A6', '#9B859D', '#AFC4DB', '#FFFFFF']
+badge-color-set=false
+default-size-rows=28
+default-size-columns=130
+use-system-font=false
+cursor-colors-set=false
+highlight-colors-set=false
+use-theme-colors=false
+font='Noto Sans Mono CJK SC 11'
+background-color='#1E1E1E'
+background-transparency-percent=5

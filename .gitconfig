@@ -17,8 +17,10 @@
 [apply]
 	whitespace = fix
 [core]
-        editor = vim
+    editor = vim
 	autocrlf = input
+[push]
+	default = simple
 [user]
 	name = Dominik Juelg
 	email = edit@email

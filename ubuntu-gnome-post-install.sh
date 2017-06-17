@@ -11,7 +11,11 @@ sudo apt-get install -y ubuntu-restricted-extras
 sudo apt-get install -y gnome-tweak-tool
 sudo apt-get install -y nautilus-open-terminal
 
+# add trusted public keys
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+
 # add repsitories
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:webupd8team/terminix
@@ -21,7 +25,7 @@ sudo apt-get update
 # needed standard applications
 sudo apt-get install -y tilix
 sudo apt-get install -y vim
-sudo apt-get install -y chromium-browser
+sudo apt-get install -y google-chrome-stable
 sudo apt-get install -y libavcodec-extra-53 libavutil-extra-51
 sudo apt-get install -y sublime-text-installer
 sudo apt-get install -y unrar
@@ -62,3 +66,12 @@ sudo update-alternatives --config editor
 sudo update-alternatives --config x-www-browser
 sudo update-alternatives --config x-terminal-emulator
 sudo update-alternatives --config gnome-www-browser
+
+# now open all important gnome shell extensions
+xdg-open https://extensions.gnome.org/extension/118/no-topleft-hot-corner/
+xdg-open https://extensions.gnome.org/extension/750/openweather/
+xdg-open https://extensions.gnome.org/extension/7/removable-drive-menu/
+xdg-open https://extensions.gnome.org/extension/19/user-themes/
+xdg-open https://extensions.gnome.org/extension/6/applications-menu/
+xdg-open https://extensions.gnome.org/extension/15/alternatetab/
+xdg-open https://extensions.gnome.org/extension/16/auto-move-windows/

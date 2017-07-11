@@ -1,0 +1,11 @@
+#!/bin/bash
+p1=$1
+p2=$2
+p3=$3
+p4=$4
+p5=$5
+p6=$6
+if [[ $p2 == *"notify"* ]]; then
+        p2=""
+fi
+/usr/bin/file-roller-binary $p1 $p2 $p3 $p4 $p5 $p6

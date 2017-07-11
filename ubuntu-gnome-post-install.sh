@@ -13,21 +13,22 @@ sudo apt-get install -y nautilus-open-terminal
 
 # add trusted public keys
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 
 # add repsitories
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:webupd8team/terminix
 sudo add-apt-repository -y ppa:mutate/ppa
 sudo apt-get update
 
 # needed standard applications
+sudo apt-get install sublime-text
 sudo apt-get install -y tilix
 sudo apt-get install -y vim
 sudo apt-get install -y google-chrome-stable
 sudo apt-get install -y libavcodec-extra-53 libavutil-extra-51
-sudo apt-get install -y sublime-text-installer
 sudo apt-get install -y unrar
 sudo apt-get install -y curl
 sudo apt-get install -y tree
@@ -36,8 +37,6 @@ sudo apt-get install -y gimp
 
 # needed development applications
 sudo apt-get install -y git
-sudo apt-get install -y mysql-server
-sudo apt-get install -y mysql-workbench
 sudo apt-get install -y oracle-java8-installer
 sudo apt-get install -y oracle-java8-set-default
 sudo apt-get install -y maven

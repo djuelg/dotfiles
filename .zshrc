@@ -91,6 +91,7 @@ alias apache="sudo /opt/lampp/xampp startapache"
 alias sagi="sudo apt-get install"
 alias saar="sudo apt autoremove"
 alias sagu="sudo apt-get upgrade"
+alias sadu="sudo apt-get dist-upgrade"
 alias __="sudo -i"
 
 RPROMPT='%{$fg[green]%}%~%{$reset_color%} [%T]'

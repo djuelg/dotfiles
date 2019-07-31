@@ -40,7 +40,9 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec rofi -show drun -theme sidetab
+bindsym $mod+Shift+d exec echo "stackoverflow\ngithub\nwetter 76137 karlsruhe" | rofi -dmenu -theme sidetab | xargs -I{} xdg-open https://www.google.de/search?q={}
 
 # change focus
 #bindsym $mod+j focus left
@@ -77,7 +79,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -97,15 +99,16 @@ set $workspace1 "1: Browser"
 set $workspace2 "2: Terminals"
 set $workspace3 "3: Editing"
 set $workspace4 "4: Programming"
+set $workspace5 "5: Other"
 set $workspace9 "9: Chats"
-set $workspace10 "10: Music"
+set $workspace10 "10: Audio"
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace $workspace4
-bindsym $mod+5 workspace 5
+bindsym $mod+5 workspace $workspace5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -117,7 +120,7 @@ bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace $workspace2
 bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace $workspace4
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+5 move container to workspace $workspace5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -129,8 +132,9 @@ workspace $workspace1 output DP-1-1
 workspace $workspace2 output DP-1-2
 workspace $workspace3 output DP-1-2
 workspace $workspace4 output DP-1-1
+workspace $workspace5 output DP-1-1
 workspace $workspace9 output DP-1-2
-workspace $workspace10 output DP-1-2
+workspace $workspace10 output DP-1-1
 
 
 # move focused workspace between monitors
@@ -144,6 +148,7 @@ assign [class="Code"] $workspace3
 assign [class="Rocket.Chat"] $workspace9
 assign [class="TelegramDesktop"] $workspace9
 assign [class="Spotify"] $workspace10
+assign [class="Pavucontrol"] $workspace10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -229,12 +234,15 @@ bar {
 
 # Custom keybindings
 bindsym $mod+l exec /home/djuelg/.config/i3/screensaver.sh
+bindsym $mod+Shift+p exec echo "poweroff\nreboot" | rofi -dmenu -theme sidetab | xargs -I{} systemctl {}
 
 # Custom always
 exec_always /home/djuelg/.screenlayout/layout.sh
+exec_always /home/djuelg/.screenlayout/gnome-keyring.sh
 exec_always feh --bg-scale /home/djuelg/Bilder/wp4179411-love-death-robots-wallpapers.jpg
 
 # Custom startups
 exec code
 exec rocketchat-desktop
 exec firefox
+exec pavucontrol

@@ -1,0 +1,17 @@
+! Custom colors
+#define color_base03   #26262d
+#define color_base02   #474956
+#define color_base01   #4c4d5b
+#define color_base00   #c0c3db
+#define color_base0    #edf2ff
+#define color_base1    #E5E9F0
+#define color_base2    #ECEFF4
+#define color_base3    #f2f5f9
+#define color_yellow   #edcd8e
+#define color_orange   #e59572
+#define color_red      #e57472
+#define color_magenta  #908dc4
+#define color_violet   #9d8dc4
+#define color_blue     #81A1C1
+#define color_cyan     #88C0D0
+#define color_green    #A3BE8C

@@ -1,0 +1,132 @@
+# i3xrocks config file
+# # The man page for i3blocks is hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=/usr/share/i3xrocks/$BLOCK_NAME
+separator_block_width=40
+markup=pango
+color=xresource:i3xrocks.value.color
+label_color=xresource:i3xrocks.label.color
+
+
+# Generic media player support
+#
+# This displays "ARTIST - SONG" if a music is playing.
+# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+[mediaplayer]
+instance=spotify
+interval=5
+signal=10
+
+# Volume indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+# [volume]
+# command=/home/djuelg/.config/i3blocks/volume/volume 5 pulse
+# label= 
+# #label=
+# instance=Master
+# #instance=PCM
+# interval=3
+# signal=10
+
+# Network manager VPN
+#
+# Displays currently connected VPN using the nm-cli tool.
+[nm-vpn]
+interval=5
+separator=false
+
+# Network interface monitoring
+#
+# If the instance is not specified, use the interface used for default route.
+# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
+# [iface]
+# #instance=wlan0
+# #color=#00FF00
+# interval=10
+# separator=false
+
+# Wifi
+#
+# Displays the wifi network's name
+# If the auto-discovered wifi device is incorrect,
+# override the "instance" value with the desired device
+[wifi2]
+#instance=wlp3s0 Replace with your wifi device if you need
+interval=5
+
+# Keyboard layout
+#
+# Displays current keyboard layout.
+#[keyboard_layout]
+#interval=persist
+
+[load_average]
+label= 
+interval=10
+
+[temperature]
+label= 
+interval=5
+
+# CPU usage
+#
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+# [cpu_usage]
+# interval=5
+# min_width=100%
+#separator=false
+
+# Battery indicator
+#
+# Displays total percentage charge left across all batteries.
+#
+# To display colored text (or icon, if "icon_only" is enabled)
+# depending on charge remaining, uncomment "percent_color".
+#
+# To display est. time remaining, uncomment "display_time_left".
+#
+# To display the battery icon only, uncomment "icon_only".
+[battery2]
+interval=30
+#display_time_left=true
+percent_color=true
+#icon_only=true
+
+# Date Time
+#
+[time]
+interval=1
+
+# Date Time
+# [calendar]
+# interval=1
+# LABEL= 
+# DATEFMT=+%d.%m.%Y %H:%M:%S
+# # SHORTFMT=+%H:%M:%S
+# HEIGHT=180
+# WIDTH=220
